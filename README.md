@@ -39,12 +39,21 @@ https://github.com/user-attachments/assets/66ca6f0d-1201-4458-812f-41b97f8474b9
 │   ├── src
 │   │   ├── main
 │   │   │   ├── java/com/skp3214/cinehubmovielistapp
-│   │   │   │   ├── MainActivity.kt
-│   │   │   │   ├── Movie.kt
-│   │   │   │   ├── MovieListScreen.kt
-│   │   │   │   ├── MovieDetailScreen.kt
-│   │   │   │   ├── DateUtils.kt
-│   │   │   │   ├── Utils.kt
+│   │   │   │   ├── models
+│   │   │   │   │   └── Movies.kt
+│   │   │   │   ├── navigation
+│   │   │   │   │   └── MovieAppNavHost.kt
+│   │   │   │   ├── repository
+│   │   │   │   │   └── MovieRepository.kt
+│   │   │   │   ├── utils
+│   │   │   │   │   ├── DateUtils.kt
+│   │   │   │   │   └── Utils.kt                 
+│   │   │   │   ├── view
+│   │   │   │   │   ├── MovieDetailScreen.kt
+│   │   │   │   │   └── MovieListScreen.kt    
+│   │   │   │   ├── viewmodel
+│   │   │   │   │   └── MovieViewModel.kt
+│   │   │   │   └── MainActivity.kt
 │   │   ├── res
 │   │   │   ├── layout
 │   │   │   ├── values
