@@ -1,5 +1,5 @@
 
-# 🎬 CineHub Movie List App 🔍
+# 🎬 CineHub Movie List App - MVVM Architecture🔍
 
 CineHubMovieListApp is a Jetpack Compose-based Android application that allows users to explore a wide variety of movies, categorized by genres such as Fantasy, Thriller, Horror, Drama, Romance, Crime, Comedy, Animation, Action, Adventure, and Biography. The app provides detailed information about each movie, including its plot, runtime, genres, cast, release date, and director.
 ## Project Demo 💻 
