@@ -1,4 +1,4 @@
-package com.skp3214.cinehubmovielistapp
+package com.skp3214.cinehubmovielistapp.utils
 
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter

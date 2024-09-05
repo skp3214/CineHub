@@ -1,8 +1,10 @@
-package com.skp3214.cinehubmovielistapp
+package com.skp3214.cinehubmovielistapp.utils
 
 import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.skp3214.cinehubmovielistapp.R
+import com.skp3214.cinehubmovielistapp.models.Movie
 import java.io.BufferedReader
 import java.io.InputStreamReader
 

@@ -1,4 +1,4 @@
-package com.skp3214.cinehubmovielistapp
+package com.skp3214.cinehubmovielistapp.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -16,12 +16,15 @@ import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
 import com.skp3214.cinehubmovielistapp.ui.theme.Black40
 import com.skp3214.cinehubmovielistapp.ui.theme.Red40
+import com.skp3214.cinehubmovielistapp.utils.formatReleaseDate
+import com.skp3214.cinehubmovielistapp.viewmodel.MovieViewModel
 
 @Composable
-fun MovieDetailScreen(movie: Movie) {
+fun MovieDetailScreen(movieTitle:String,movieViewModel: MovieViewModel) {
     val scrollState = rememberScrollState()
-    val releaseDate = movie.released.date
-    val formattedDate = formatReleaseDate(releaseDate)
+    val movie=movieViewModel.getMovieByTitle(movieTitle)
+    val releaseDate = movie?.released?.date
+    val formattedDate = releaseDate?.let { formatReleaseDate(it) }
 
     Box(
         modifier = Modifier
@@ -32,7 +35,7 @@ fun MovieDetailScreen(movie: Movie) {
     ) {
         Column {
             Image(
-                painter = rememberAsyncImagePainter(movie.poster),
+                painter = rememberAsyncImagePainter(movie!!.poster),
                 contentDescription = null,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -53,7 +56,7 @@ fun MovieDetailScreen(movie: Movie) {
             DetailText(label = "Rated", value = movie.rated)
             DetailText(label = "Plot", value = movie.fullplot)
             DetailText(label = "Cast", value = movie.cast.joinToString(", "))
-            DetailText(label = "Release Date", value = formattedDate)
+            DetailText(label = "Release Date", value = formattedDate!!)
             DetailText(label = "Writers", value = movie.writers.joinToString(","))
             DetailText(label = "Director", value = movie.directors.joinToString(", "))
         }

@@ -1,4 +1,4 @@
-package com.skp3214.cinehubmovielistapp
+package com.skp3214.cinehubmovielistapp.models
 
 data class Movie(
     val title: String,

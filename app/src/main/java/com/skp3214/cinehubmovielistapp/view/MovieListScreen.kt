@@ -1,4 +1,4 @@
-package com.skp3214.cinehubmovielistapp
+package com.skp3214.cinehubmovielistapp.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -26,8 +26,11 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.skp3214.cinehubmovielistapp.ui.theme.Black40
 import androidx.compose.ui.layout.ContentScale
+import com.skp3214.cinehubmovielistapp.models.Movie
+import com.skp3214.cinehubmovielistapp.viewmodel.MovieViewModel
+
 @Composable
-fun MovieListScreen(movies: List<Movie>, navController: NavController) {
+fun MovieListScreen(navController: NavController,movieViewModel: MovieViewModel) {
 
     val genres = listOf(
         "Popular Movies", "Fantasy", "Thriller", "Horror", "Drama",
@@ -52,11 +55,7 @@ fun MovieListScreen(movies: List<Movie>, navController: NavController) {
                     LazyRow(
                         modifier = Modifier.height(250.dp)
                     ) {
-                        val filteredMovies = if (genre == "Popular Movies") {
-                            movies.filterIndexed { index, _ -> index % 2 == 1 }
-                        } else {
-                            movies.filter { it.genres.contains(genre) }
-                        }
+                        val filteredMovies = movieViewModel.getMoviesByGenre(genre)
 
                         items(filteredMovies) { movie ->
                             MovieItemHorizontal(movie) {
