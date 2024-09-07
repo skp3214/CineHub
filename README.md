@@ -70,7 +70,7 @@ To run this project locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/CineHub.git
+   git clone https://github.com/skp3214/CineHub.git
    ```
 
 2. **Open the project** in Android Studio.
