@@ -4,7 +4,7 @@
 CineHubMovieListApp is a Jetpack Compose-based Android application that allows users to explore a wide variety of movies, categorized by genres such as Fantasy, Thriller, Horror, Drama, Romance, Crime, Comedy, Animation, Action, Adventure, and Biography. The app provides detailed information about each movie, including its plot, runtime, genres, cast, release date, and director.
 ## Project Demo 💻 
 
-https://github.com/user-attachments/assets/66ca6f0d-1201-4458-812f-41b97f8474b9
+https://github.com/user-attachments/assets/a08c0671-f4b9-432d-9a1e-dde07a209feb
 
 ## Features
 
@@ -15,8 +15,9 @@ https://github.com/user-attachments/assets/66ca6f0d-1201-4458-812f-41b97f8474b9
 - **Date Formatting**: Handles complex date formatting, converting raw JSON date objects into human-readable formats.
 
 ## Screenshots
-![image](https://github.com/user-attachments/assets/6ab914b0-efe9-45ce-b015-91fe85796e55)
+![image](https://github.com/user-attachments/assets/b4191b76-99bc-40de-9c0b-54fbb5b9312d)
 
+![image](https://github.com/user-attachments/assets/6ab914b0-efe9-45ce-b015-91fe85796e55)
 ![image](https://github.com/user-attachments/assets/655ba35a-a373-4d11-b500-a6e988f14622)
 
 ![image](https://github.com/user-attachments/assets/bca866cd-7d9d-4875-be90-d765247db573)
@@ -50,6 +51,8 @@ https://github.com/user-attachments/assets/66ca6f0d-1201-4458-812f-41b97f8474b9
 │   │   │   │   │   └── Utils.kt                 
 │   │   │   │   ├── view
 │   │   │   │   │   ├── MovieDetailScreen.kt
+|   |   |   |   |   ├── MovieSearchComponent.kt
+|   |   |   |   |   ├── SearchResultScreen.kt
 │   │   │   │   │   └── MovieListScreen.kt    
 │   │   │   │   ├── viewmodel
 │   │   │   │   │   └── MovieViewModel.kt
@@ -118,9 +121,8 @@ dependencies {
 
 ## Future Enhancements
 
-- **Search Functionality**: Add a search bar to allow users to find movies by title.
+- **Search Functionality**: Add a search bar to allow users to find movies by title (Finally It's done). 
 - **Favorites**: Implement a feature to let users mark movies as favorites and access them quickly.
-- 
 ## Contributing
 
 If you'd like to contribute to this project, feel free to fork the repository and submit a pull request. You can also open an issue if you find any bugs or have any suggestions for improvements.
