@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.skp3214.cinehubmovielistapp"
-        minSdk = 33
+        minSdk = 31
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -71,5 +71,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.gson)
     implementation (libs.coil.compose)
-
+    implementation(libs.commons.text)
 }

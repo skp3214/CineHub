@@ -22,6 +22,16 @@ class MovieViewModel(private val repository: MovieRepository) : ViewModel() {
         }
     }
 
+    fun searchMovies(query: String): List<Movie> {
+        val lowerQuery = query.lowercase()
+
+        val movieList = movies.value.orEmpty()
+
+        return movieList.filter { movie ->
+            movie.title.lowercase().contains(lowerQuery)
+        }
+    }
+
     fun getMoviesByGenre(genre: String): List<Movie> {
         if(genre=="Popular Movies"){
             return movies.value?.filterIndexed { index, _ -> index%3 == 1 }?: emptyList()
