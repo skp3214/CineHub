@@ -1,94 +1,110 @@
+# 🎬 **CineHub Movie List App — MVVM Architecture** 🔍
 
-# 🎬 CineHub Movie List App - MVVM Architecture🔍
+**CineHub Movie List App** is a Jetpack Compose-based Android application that lets users browse a wide variety of movies. Movies are organized by genres such as **Fantasy, Thriller, Horror, Drama, Romance, Crime, Comedy, Animation, Action, Adventure, and Biography**.
+Users can view rich details about each movie, including **plot, runtime, genres, cast, release date, and director**.
 
-CineHubMovieListApp is a Jetpack Compose-based Android application that allows users to explore a wide variety of movies, categorized by genres such as Fantasy, Thriller, Horror, Drama, Romance, Crime, Comedy, Animation, Action, Adventure, and Biography. The app provides detailed information about each movie, including its plot, runtime, genres, cast, release date, and director.
-## Project Demo 💻 
+---
+## 📸 Screenshots
+
+<img width="2245" height="1587" alt="cinehub" src="https://github.com/user-attachments/assets/a3319b53-3624-426b-a53c-e4f29f67421f" />
+
+---
+## 🚀 Project Demo
+
+▶️ Watch the demo:
 
 https://github.com/user-attachments/assets/a08c0671-f4b9-432d-9a1e-dde07a209feb
 
-## Features
+---
 
-- **Movie Listings**: Browse a vast collection of movies categorized by genres. Each category is displayed in a horizontal scroll view for easy navigation.
-- **Movie Details**: Click on any movie to view detailed information, including plot, runtime, genres, cast, release date, and director.
-- **Responsive UI**: The app utilizes Jetpack Compose for a modern, responsive UI, ensuring a seamless experience across different screen sizes.
-- **Image Loading**: Movie posters are efficiently loaded using Coil, a Kotlin-first image loading library.
-- **Date Formatting**: Handles complex date formatting, converting raw JSON date objects into human-readable formats.
+## ✨ Features
 
-## Screenshots
-![image](https://github.com/user-attachments/assets/b4191b76-99bc-40de-9c0b-54fbb5b9312d)
+* **Movie Library**
+  Browse movies by categories, displayed in horizontal scrollable lists.
 
-![image](https://github.com/user-attachments/assets/6ab914b0-efe9-45ce-b015-91fe85796e55)
-![image](https://github.com/user-attachments/assets/655ba35a-a373-4d11-b500-a6e988f14622)
+* **Detailed Movie View**
+  Tap any movie to view:
 
-![image](https://github.com/user-attachments/assets/bca866cd-7d9d-4875-be90-d765247db573)
+  * Plot
+  * Runtime
+  * Genre list
+  * Cast & Crew
+  * Release date
+  * Director
 
-![image](https://github.com/user-attachments/assets/7540f4cf-25fc-41d7-9f13-f36b192a25f6)
+* **Modern UI with Compose**
+  Responsive, smooth, and adaptive layout across screen sizes.
 
+* **Fast Poster Loading**
+  Images are efficiently loaded using **Coil**.
 
-## Tech Stack
+* **Smart Date Formatting**
+  Raw JSON dates are converted into clean, readable formats.
 
-- **Kotlin**: The primary programming language for Android development.
-- **Jetpack Compose**: Modern Android UI toolkit for building native UIs.
-- **Coil**: A fast and lightweight image loading library for Android.
-- **Material Design 3**: Utilized for styling and theming the UI.
-- **Gson**: A Java library used for converting JSON into Java objects.
+---
 
-## Project Structure
+## 🛠️ Tech Stack
 
-```bash
+* **Kotlin**
+* **Jetpack Compose**
+* **Material Design 3**
+* **Coil (Image Loading)**
+* **Gson (JSON Parsing)**
+
+---
+
+## 📁 Project Structure
+
+```
 ├── app
-│   ├── src
-│   │   ├── main
-│   │   │   ├── java/com/skp3214/cinehubmovielistapp
-│   │   │   │   ├── models
-│   │   │   │   │   └── Movies.kt
-│   │   │   │   ├── navigation
-│   │   │   │   │   └── MovieAppNavHost.kt
-│   │   │   │   ├── repository
-│   │   │   │   │   └── MovieRepository.kt
-│   │   │   │   ├── utils
-│   │   │   │   │   ├── DateUtils.kt
-│   │   │   │   │   └── Utils.kt                 
-│   │   │   │   ├── view
-│   │   │   │   │   ├── MovieDetailScreen.kt
-|   |   |   |   |   ├── MovieSearchComponent.kt
-|   |   |   |   |   ├── SearchResultScreen.kt
-│   │   │   │   │   └── MovieListScreen.kt    
-│   │   │   │   ├── viewmodel
-│   │   │   │   │   └── MovieViewModel.kt
-│   │   │   │   └── MainActivity.kt
-│   │   ├── res
-│   │   │   ├── layout
-│   │   │   ├── values
-│   │   │   ├── raw
-│   │   │   │   ├── movie.json
+│   ├── src/main/java/com/skp3214/cinehubmovielistapp
+│   │   ├── models
+│   │   │   └── Movies.kt
+│   │   ├── navigation
+│   │   │   └── MovieAppNavHost.kt
+│   │   ├── repository
+│   │   │   └── MovieRepository.kt
+│   │   ├── utils
+│   │   │   ├── DateUtils.kt
+│   │   │   └── Utils.kt
+│   │   ├── view
+│   │   │   ├── MovieDetailScreen.kt
+│   │   │   ├── MovieSearchComponent.kt
+│   │   │   ├── SearchResultScreen.kt
+│   │   │   └── MovieListScreen.kt
+│   │   ├── viewmodel
+│   │   │   └── MovieViewModel.kt
+│   │   └── MainActivity.kt
+│   ├── res/raw
+│   │   └── movie.json
 │   └── build.gradle
 ├── README.md
 ```
 
-## Installation
+---
 
-To run this project locally, follow these steps:
+## 🔧 Installation
 
-1. **Clone the repository**:
+1. **Clone the repository**
 
-   ```bash
-   git clone https://github.com/skp3214/CineHub.git
-   ```
+```bash
+git clone https://github.com/skp3214/CineHub.git
+```
 
-2. **Open the project** in Android Studio.
+2. **Open in Android Studio**
 
-3. **Sync the project with Gradle** to download all dependencies.
+3. **Sync Gradle**
 
-4. **Run the app** on an emulator or physical device.
+4. **Run on Emulator or Device**
 
-## Dependencies
+---
 
-Make sure you have the following dependencies in your `build.gradle`:
+## 📦 Dependencies
+
+Make sure your `build.gradle` includes:
 
 ```gradle
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -108,27 +124,39 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.gson)
-    implementation (libs.coil.compose)
-
+    implementation(libs.coil.compose)
 }
 ```
 
-## How to Use
+---
 
-1. **Browse Movies**: Start the app and scroll through the different genres to browse movies.
-2. **View Details**: Click on any movie to view more detailed information about it.
-3. **Navigation**: The app uses simple navigation to move between the movie list and detail screens.
+## 🧭 How to Use
 
-## Future Enhancements
-
-- **Search Functionality**: Add a search bar to allow users to find movies by title (Finally It's done). 
-- **Favorites**: Implement a feature to let users mark movies as favorites and access them quickly.
-## Contributing
-
-If you'd like to contribute to this project, feel free to fork the repository and submit a pull request. You can also open an issue if you find any bugs or have any suggestions for improvements.
-
-## Contact
-
-For any inquiries or suggestions, please reach out to **Sachin Prajapati** at **skprajapati3214@gmail.com**.
+✔️ Launch the app and browse movies by genre
+✔️ Tap any movie for full details
+✔️ Navigate easily between screens with Compose Navigation
 
 ---
+
+## 🔮 Future Enhancements
+
+* **Favorites List**
+  Allow users to save movies they love.
+
+* **Extended Search** ✔️ *(Search is now implemented)*
+  Search by title and view matching results.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+Feel free to **fork**, make changes, and open a **pull request**.
+You can also report issues or suggest improvements.
+
+---
+
+## 📬 Contact
+
+👤 **Sachin Prajapati**
+📧 **[skprajapati3214@gmail.com](mailto:skprajapati3214@gmail.com)**
